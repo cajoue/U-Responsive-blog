@@ -12,18 +12,74 @@ I've left some boilerplate below for you.
 
 */
 
-body {
+/* Box-sizing border-box */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
+body, html {
+	font-family: 'Biryani', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: #424242;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+header, nav, footer, section, article, div {
+  display: block;
+  width: 100%;
 }
 
 article {
-
-}
-
-h1 {
-
+	max-width: 50em;
+	margin: auto;
 }
 
 img {
+	max-width: 100%;
+	border-radius: 5%;
+}
+
+figcaption {
+	color: #e74e3c;
+	text-align: right;;
+}
+
+/*
+ *
+ * Header
+ *
+ */
+
+.header {
+		max-width: 50em;
+	margin: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  min-height: 56px;
+  text-align: center;
+
 
 }
+
+
+.header__title {
+  font-weight: 700;
+  /*font-size: 3.75em;*/
+  margin: 0.5em 0.25em;
+  /*display: inline-block;*/
+  color: #2a457a;
+  /*flex-grow: 5;*/
+  text-transform: uppercase;
+}
+
+.title {
+	color: #2A457A;
+}
+
