@@ -1,27 +1,40 @@
-/*
+/* zocial */
+    [class*="zocial-"]:before {
+      font-family: 'zocial', sans-serif;
+      display: inline-block;
+      text-shadow: 3px 3px 3px #999;
+      width: 2em;
+        color: #e74e3c;
+        }
 
-Your styles go here!
+a:hover [class*="zocial-"]:before {
+  color: #3d85c6;
+}
 
-Hint! You'll probably want to start by styling:
-  * <body>
-  * <article>
-  * <h1>
-  * <img>
+div#social a {
+  margin: 0 1em 0 0;
+}
 
-I've left some boilerplate below for you.
+div#social a:last-of-type {
+  margin: 0;
+}
 
-*/
+div#social {
+  line-height: 2em;
+}
+
 
 /* Box-sizing border-box */
+
 * {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-body, html {
+body {
 	font-family: 'Biryani', sans-serif;
-  margin: 0;
+  margin: 2em;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -29,17 +42,20 @@ body, html {
 }
 
 h1, h2, h3, h4, h5 {
-  margin: 0;
+  margin: 0 auto 1em auto;
+  width: 800px;
 }
 
 header, nav, footer, section, article, div {
   display: block;
   width: 100%;
+  margin: 0 auto;
 }
 
-article {
+article, footer {
 	max-width: 50em;
-	margin: auto;
+	margin: 0 auto;
+    border-bottom: 1px solid #ddd;
 }
 
 img {
@@ -49,8 +65,15 @@ img {
 
 figcaption {
 	color: #e74e3c;
-	text-align: right;;
+	text-align: right;
+    padding: 1em 0;
 }
+
+figure {
+  margin: 1em 0 1em 0;
+}
+
+
 
 /*
  *
@@ -59,11 +82,12 @@ figcaption {
  */
 
 .header {
-		max-width: 50em;
+	max-width: 50em;
 	margin: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   min-height: 56px;
-  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 
 
 }
@@ -82,4 +106,19 @@ figcaption {
 .title {
 	color: #2A457A;
 }
+
+svg#logo {
+  height: 6vw;
+  margin: 0 auto 0.5em auto;
+  width: 6vw;
+}
+
+/* The fill doesn't work on my svg but the shadow does */
+header:hover svg#logo {
+  fill: #3d85c6;
+  -webkit-filter: drop-shadow(3px 3px 3px #3d85c6);
+  filter: drop-shadow(3px 3px 3px #3d85c6);
+}
+
+
 
