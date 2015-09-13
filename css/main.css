@@ -43,7 +43,7 @@ body {
 
 h1, h2, h3, h4, h5 {
   margin: 0 auto 1em auto;
-  width: 800px;
+  width: 100%;
 }
 
 header, nav, footer, section, article, div {
@@ -88,18 +88,14 @@ figure {
   min-height: 56px;
   display: flex;
   flex-wrap: wrap;
-
-
 }
 
 
 .header__title {
   font-weight: 700;
-  /*font-size: 3.75em;*/
+  font-size: 2.5em;
   margin: 0.5em 0.25em;
-  /*display: inline-block;*/
   color: #2a457a;
-  /*flex-grow: 5;*/
   text-transform: uppercase;
 }
 
@@ -107,18 +103,36 @@ figure {
 	color: #2A457A;
 }
 
+.content-block{
+  border-left-color: #e74e3c;
+  border-left-style: solid;
+  border-left-width: 6px;
+  padding-left: 15px;
+}
+
+
 svg#logo {
+  fill: #e74e3c;
   height: 6vw;
   margin: 0 auto 0.5em auto;
   width: 6vw;
+  min-height: 48px;
+  min-width: 48px;
 }
 
-/* The fill doesn't work on my svg but the shadow does */
-header:hover svg#logo {
+/* The fill obliterates the lettering on my svg */
+/* redesign so that lettering changes from blue to white rather than background from orange to blue */
+/*header:hover svg#logo path{
   fill: #3d85c6;
+}*/
+
+header:hover svg#logo g{
+  fill: #fff;
+}
+
+header:hover svg#logo{
   -webkit-filter: drop-shadow(3px 3px 3px #3d85c6);
   filter: drop-shadow(3px 3px 3px #3d85c6);
 }
-
 
 
